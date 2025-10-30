@@ -1,0 +1,244 @@
+<html>
+<head>
+  <title>Pahan's web</title>
+
+  <style>
+    body {
+      background-color: #07182b;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    /* Menu Bar */
+    .menu {
+      display: flex;
+      justify-content: center;
+      background-color: #74cbd1;
+      border-bottom: 2.5px solid #07182b;
+      padding: 5px 0;
+    }
+
+    .menu div {
+      padding: 0 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-right: 2px solid #081a2f;
+      color: #0a3404;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu div:last-child {
+      border-right: none;
+    }
+
+    .menu div:hover {
+      background-color: #07182b;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* Slider Section */
+    .slider {
+      position: relative;
+      width: 60%;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 3px solid #0c2e45;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 100px;
+      height: 60px;
+      border-radius: 5px;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .thumbnails img:hover {
+      opacity: 1;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.4);
+      color: white;
+      font-size: 22px;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .arrow:hover {
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .prev {
+      left: 0px;
+    }
+
+    .next {
+      right: -0px;
+    }
+
+    /* Chiron Details Section */
+    section {
+      width: 80%;
+      max-width: 900px;
+      margin-top: 50px;
+      border-bottom: 1px solid #0c2e45;
+      padding-bottom: 20px;
+    }
+
+    h1, h2 {
+      color: #00aaff;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "⚙️ ";
+      color: #00aaff;
+    }
+
+    .highlight {
+      color: #ffaa00;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9em;
+      margin-top: 40px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Moving Header -->
+  <div class="topc">
+    <marquee scrollamount="30"
+      style="border:solid rgb(1,1,0); color:red; background-color:rgb(193,255,69);
+      width:1580px; height:40px; font-size:30px; font-family:'Courier New', Courier, monospace;">
+      SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars
+    </marquee>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/tester%20one%20.html" style="text-decoration: none;">Bugatti Chiron</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/rimac%20nevera.html" style="text-decoration: none;">Rimac Nevera</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Pininfarina%20Battista.html" style="text-decoration: none;">Pininfarina Battista</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Lamborghini.html" style="text-decoration: none;">Lamborghini</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Ferrari%20812%20Competizione.html" style="text-decoration: none;">Ferrari 812 Competizione</a></div>
+  </div>
+
+  <br><br>
+
+  <!-- Image Gallery -->
+  <center><h2>Ferrari 812 Competizione Gallery</h2></center>
+
+  <center>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="1100xxs.webp" alt="Car 1">
+      <img src="812_Competizione_statics-details_47_0.jpg.webp" alt="Car 2">
+      <img src="812_Competizione_rear_tracking_5_0.jpg.webp" alt="Car 3">
+      <img src="_P2A8119_0.jpg.webp" alt="Car 4">
+    </div>
+    <div class="arrow prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="arrow next" onclick="changeSlide(1)">&#10095;</div>
+  </div>
+  </center>
+
+  <div class="thumbnails">
+    <img src="1100xxs.webp" onclick="goToSlide(0)">
+    <img src="812_Competizione_statics-details_47_0.jpg.webp" onclick="goToSlide(1)">
+    <img src="812_Competizione_rear_tracking_5_0.jpg.webp" onclick="goToSlide(2)">
+    <img src="_P2A8119_0.jpg.webp" onclick="goToSlide(3)">
+  </div>
+
+  <section id="ferrari-812">
+  <h1>🏁 Ferrari 812 Competizione – The Ultimate V12 Experience</h1>
+  <p>The <span class="highlight">Ferrari 812 Competizione</span> is the pinnacle of Ferrari’s front-engine V12 heritage. It delivers raw power, precise handling, and Italian craftsmanship that honor the brand’s racing DNA.</p>
+
+  <h2>⚙️ Engine & Performance</h2>
+  <ul>
+    <li>Engine: <strong>6.5-liter naturally aspirated V12</strong></li>
+    <li>Power Output: <strong>830 horsepower (619 kW)</strong></li>
+    <li>Torque: <strong>692 Nm (510 lb-ft)</strong></li>
+    <li>0–100 km/h: <strong>2.85 seconds</strong></li>
+    <li>Top Speed: <strong>340 km/h (211 mph)</strong></li>
+  </ul>
+
+  <h2>🧩 Design & Aerodynamics</h2>
+  <p>Ferrari engineers optimized the 812 Competizione with a redesigned front bumper, carbon fiber rear diffuser, and active vortex generators for extreme downforce.</p>
+
+  <h2>💎 Interior & Technology</h2>
+  <p>Inside, the driver-focused cockpit uses carbon fiber, Alcantara, and digital instrument clusters inspired by Ferrari’s Formula 1 cars.</p>
+
+  <h2>💰 Price & Production</h2>
+  <ul>
+    <li>Price: Around <strong>€600,000 (USD 700,000)</strong></li>
+    <li>Production: <strong>999 Coupes and 599 Apertas</strong></li>
+  </ul>
+</section>
+
+
+  <footer>
+    © 2025 Ferrari 812 Competizione Page | Designed by Pahan
+  </footer>
+
+  <!-- Script for image slider -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>

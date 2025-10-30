@@ -1,0 +1,248 @@
+<html>
+<head>
+  <title>Pahan's web</title>
+
+  <style>
+    body {
+      background-color: #07182b;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    /* Menu Bar */
+    .menu {
+      display: flex;
+      justify-content: center;
+      background-color: #74cbd1;
+      border-bottom: 2.5px solid #07182b;
+      padding: 5px 0;
+    }
+
+    .menu div {
+      padding: 0 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-right: 2px solid #081a2f;
+      color: #0a3404;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu div:last-child {
+      border-right: none;
+    }
+
+    .menu div:hover {
+      background-color: #07182b;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* Slider Section */
+    .slider {
+      position: relative;
+      width: 60%;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 3px solid #0c2e45;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 100px;
+      height: 60px;
+      border-radius: 5px;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .thumbnails img:hover {
+      opacity: 1;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.4);
+      color: white;
+      font-size: 22px;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .arrow:hover {
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .prev {
+      left: 0px;
+    }
+
+    .next {
+      right: -0px;
+    }
+
+    /* Chiron Details Section */
+    section {
+      width: 80%;
+      max-width: 900px;
+      margin-top: 50px;
+      border-bottom: 1px solid #0c2e45;
+      padding-bottom: 20px;
+    }
+
+    h1, h2 {
+      color: #00aaff;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "⚙️ ";
+      color: #00aaff;
+    }
+
+    .highlight {
+      color: #ffaa00;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9em;
+      margin-top: 40px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Moving Header -->
+  <div class="topc">
+    <marquee scrollamount="30"
+      style="border:solid rgb(1,1,0); color:red; background-color:rgb(193,255,69);
+      width:1580px; height:40px; font-size:30px; font-family:'Courier New', Courier, monospace;">
+      SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars
+    </marquee>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/tester%20one%20.html" style="text-decoration: none;">Bugatti Chiron</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/rimac%20nevera.html" style="text-decoration: none;">Rimac Nevera</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Pininfarina%20Battista.html" style="text-decoration: none;">Pininfarina Battista</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Lamborghini.html" style="text-decoration: none;">Lamborghini</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Ferrari%20812%20Competizione.html" style="text-decoration: none;">Ferrari 812 Competizione</a></div>
+  </div>
+
+  <br><br>
+
+  <!-- Image Gallery -->
+  <center><h2>Brimac nevera Gallery</h2></center>
+
+  <center>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="Rimac-Nevera-Front-Driving.webp" alt="Car 1">
+      <img src="rimacnevera-4.jpg.webp" alt="Car 2">
+      <img src="rimacnevera-28.jpg.webp" alt="Car 3">
+      <img src="rimacnevera-26_0.jpg.webp" alt="Car 4">
+    </div>
+    <div class="arrow prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="arrow next" onclick="changeSlide(1)">&#10095;</div>
+  </div>
+  </center>
+
+  <div class="thumbnails">
+    <img src="Rimac-Nevera-Front-Driving.webp" onclick="goToSlide(0)">
+    <img src="rimacnevera-4.jpg.webp" onclick="goToSlide(1)">
+    <img src="rimacnevera-28.jpg.webp" onclick="goToSlide(2)">
+    <img src="rimacnevera-26_0.jpg.webp" onclick="goToSlide(3)">
+  </div>
+
+  <section id="rimac-nevera">
+  <h1>⚡ Rimac Nevera – The Electric Hypercar Revolution</h1>
+  <p>The <span class="highlight">Rimac Nevera</span> is a Croatian all-electric hypercar built by <strong>Rimac Automobili</strong>. It redefines performance and innovation, blending breathtaking acceleration with cutting-edge technology.</p>
+
+  <h2>⚙️ Performance</h2>
+  <ul>
+    <li>Motors: 4 electric motors (one per wheel)</li>
+    <li>Power Output: <strong>1,914 horsepower (1,408 kW)</strong></li>
+    <li>Torque: <strong>2,360 Nm (1,741 lb-ft)</strong></li>
+    <li>0–100 km/h: <strong>1.85 seconds</strong></li>
+    <li>Top Speed: <strong>412 km/h (256 mph)</strong></li>
+    <li>Range: Around <strong>490 km (304 miles)</strong> (WLTP)</li>
+  </ul>
+
+  <h2>🔋 Battery & Tech</h2>
+  <ul>
+    <li>Battery: <strong>120 kWh lithium-manganese-nickel</strong></li>
+    <li>Charging: 0–80% in under 30 minutes (DC fast charging)</li>
+    <li>AI driving assistance and torque vectoring</li>
+  </ul>
+
+  <h2>💎 Design & Interior</h2>
+  <p>The Nevera’s carbon monocoque chassis and aerodynamic body combine elegance and efficiency. Inside, digital displays and hand-finished materials reflect futuristic luxury.</p>
+
+  <h2>💰 Price & Production</h2>
+  <ul>
+    <li>Starting Price: Around <strong>€2 million (USD 2.2 million)</strong></li>
+    <li>Production: <strong>150 units worldwide</strong></li>
+  </ul>
+</section>
+
+  <footer>
+    © 2025 Rimac Nevera Page | Designed by Pahan
+  </footer>
+
+  <!-- Script for image slider -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>

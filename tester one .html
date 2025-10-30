@@ -1,0 +1,274 @@
+<html>
+<head>
+  <title>Pahan's web</title>
+
+  <style>
+    body {
+      background-color: #07182b;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    /* Menu Bar */
+    .menu {
+      display: flex;
+      justify-content: center;
+      background-color: #74cbd1;
+      border-bottom: 2.5px solid #07182b;
+      padding: 5px 0;
+    }
+
+    .menu div {
+      padding: 0 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-right: 2px solid #081a2f;
+      color: #0a3404;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu div:last-child {
+      border-right: none;
+    }
+
+    .menu div:hover {
+      background-color: #07182b;
+      color: white;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* Slider Section */
+    .slider {
+      position: relative;
+      width: 60%;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 3px solid #0c2e45;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .thumbnails {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 100px;
+      height: 60px;
+      border-radius: 5px;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .thumbnails img:hover {
+      opacity: 1;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.4);
+      color: white;
+      font-size: 22px;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .arrow:hover {
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .prev {
+      left: 0px;
+    }
+
+    .next {
+      right: -0px;
+    }
+
+    /* Chiron Details Section */
+    section {
+      width: 80%;
+      max-width: 900px;
+      margin-top: 50px;
+      border-bottom: 1px solid #0c2e45;
+      padding-bottom: 20px;
+    }
+
+    h1, h2 {
+      color: #00aaff;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "⚙️ ";
+      color: #00aaff;
+    }
+
+    .highlight {
+      color: #ffaa00;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9em;
+      margin-top: 40px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Moving Header -->
+  <div class="topc">
+    <marquee scrollamount="30"
+      style="border:solid rgb(1,1,0); color:red; background-color:rgb(193,255,69);
+      width:1580px; height:40px; font-size:30px; font-family:'Courier New', Courier, monospace;" behavior="alternate">
+      SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars &nbsp;&nbsp; SuperCars
+    </marquee>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/tester%20one%20.html" style="text-decoration: none;">Bugatti Chiron</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/rimac%20nevera.html" style="text-decoration: none;">Rimac Nevera</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Pininfarina%20Battista.html" style="text-decoration: none;">Pininfarina Battista</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Lamborghini.html" style="text-decoration: none;">Lamborghini</a></div>
+    <div><a href="file:///Users/pahannimsara/Movies/myproject/Ferrari%20812%20Competizione.html" style="text-decoration: none;">Ferrari 812 Competizione</a></div>
+  </div>
+
+  <br><br>
+
+  <!-- Image Gallery -->
+  <center><h2>Bugatti Chiron Gallery</h2></center>
+
+  <center>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="bugatti chiron.jpg" alt="Car 1">
+      <img src="_Z3A6982.jpg.webp" alt="Car 2">
+      <img src="_Z3A8190.jpg.webp" alt="Car 3">
+      <img src="_Z3A7768.jpg.webp" alt="Car 4">
+    </div>
+    <div class="arrow prev" onclick="changeSlide(-1)">&#10094;</div>
+    <div class="arrow next" onclick="changeSlide(1)">&#10095;</div>
+  </div>
+  </center>
+
+  <div class="thumbnails">
+    <img src="bugatti chiron.jpg" onclick="goToSlide(0)">
+    <img src="_Z3A6982.jpg.webp" onclick="goToSlide(1)">
+    <img src="_Z3A8190.jpg.webp" onclick="goToSlide(2)">
+    <img src="_Z3A7768.jpg.webp" onclick="goToSlide(3)">
+  </div>
+
+  <!-- Bugatti Chiron Details -->
+  <section id="intro">
+    <h1>🏎️ Bugatti Chiron – The Epitome of Automotive Excellence</h1>
+    <p>The <span class="highlight">Bugatti Chiron</span> is a masterpiece of engineering, luxury, and speed. Crafted by <strong>Bugatti Automobiles S.A.S.</strong>, this hypercar stands as a symbol of precision performance and timeless design.</p>
+  </section>
+
+  <section id="performance">
+    <h2>⚙️ Engine & Performance</h2>
+    <ul>
+      <li>Engine: 8.0-liter quad-turbocharged <strong>W16</strong></li>
+      <li>Power Output: <strong>1,500 horsepower (1,103 kW)</strong></li>
+      <li>Torque: <strong>1,600 Nm (1,180 lb-ft)</strong></li>
+      <li>Transmission: 7-speed dual-clutch automatic</li>
+      <li>Drivetrain: All-wheel drive (AWD)</li>
+      <li>0–100 km/h (0–62 mph): <strong>2.4 seconds</strong></li>
+      <li>Top Speed: Electronically limited to <strong>420 km/h (261 mph)</strong></li>
+    </ul>
+  </section>
+
+  <section id="design">
+    <h2>🧩 Design & Aerodynamics</h2>
+    <p>The Chiron’s body features an elegant yet aggressive design crafted from <strong>carbon fiber</strong>, optimized for aerodynamics and stability at extreme speeds.</p>
+  </section>
+
+  <section id="interior">
+    <h2>💎 Interior & Luxury</h2>
+    <p>Inside the Chiron, every surface speaks luxury and craftsmanship.</p>
+    <ul>
+      <li>Hand-stitched <strong>leather and carbon fiber</strong> finishes</li>
+      <li><strong>Digital driver display</strong> with analog speedometer centerpiece</li>
+      <li>Dual climate control, premium sound system, and customizable interiors</li>
+    </ul>
+  </section>
+
+  <section id="safety">
+    <h2>🔒 Safety & Technology</h2>
+    <ul>
+      <li><strong>Carbon-titanium monocoque chassis</strong> for superior rigidity</li>
+      <li><strong>High-performance ceramic brakes</strong> with advanced cooling</li>
+      <li><strong>Active suspension</strong> and stability control system</li>
+      <li><strong>Telemetry system</strong> for real-time performance monitoring</li>
+    </ul>
+  </section>
+
+  <section id="price">
+    <h2>💰 Price & Rarity</h2>
+    <ul>
+      <li>Starting Price: Around <strong>€2.5 million (USD 3 million)</strong></li>
+      <li>Production: Limited to <strong>500 units worldwide</strong></li>
+    </ul>
+  </section>
+
+  <section id="funfact">
+    <h2>🌍 Fun Fact</h2>
+    <p>At full speed, the Chiron consumes <strong>60,000 liters of air per minute</strong> — the same amount a human breathes in <strong>four days!</strong></p>
+  </section>
+
+  <footer>
+    © 2025 Bugatti Enthusiast Page | Designed by Pahan
+  </footer>
+
+  <!-- Script for image slider -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+
+</body>
+</html>
